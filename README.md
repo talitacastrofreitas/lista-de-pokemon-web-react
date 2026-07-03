@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# 🔴 Lista de Pokémon - Web React
+Um aplicativo front-end simples e temático desenvolvido em **React** para listar pokémons. O projeto foi projetado como um exercício prático para aplicação de conceitos fundamentais da biblioteca React, incluindo componentização, passagem de propriedades (*props*), reset de CSS e encapsulamento de estilos utilizando **CSS Modules**.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+## 🎯 Principais Recursos
+- **Componentização Reutilizável:** Encapsulamento da exibição do Pokémon em um componente isolado `<Pokemon />`.
+- **Passagem de Propriedades (Props):** O nome do Pokémon é enviado dinamicamente via propriedade para o card (`<Pokemon name="Pikachu" />`).
+- **CSS Modules:** Utilização de arquivos `.module.css` para isolar a estilização de componentes e páginas, prevenindo conflitos globais de seletores.
+- **Efeitos Visuais Interativos:** Cards temáticos (estilo amarelo Pokébola) que respondem à interação do usuário, alterando a cor de fundo para cinza e o texto para vermelho com transição suave ao passar o cursor (*hover*).
+- **Fundo Temático:** Estilização global com background vermelho sólido e logotipo centralizado do universo Pokémon.
+---
+## 📂 Estrutura do Projeto
+Abaixo está o mapeamento dos arquivos que compõem o ecossistema do aplicativo:
+```bash
+lista-de-pokemon-web-react/
+├── public/
+│   ├── favicon.ico          # Ícone de aba do navegador
+│   └── index.html           # Documento HTML base
+├── src/
+│   ├── components/
+│   │   └── Pokemon/
+│   │       ├── index.jsx           # Componente de exibição do card do Pokémon
+│   │       └── styles.module.css   # Estilos isolados do card (amarelo, hover e transições)
+│   ├── img/
+│   │   └── pokemon_logo.png # Logotipo oficial do Pokémon carregado na home
+│   ├── pages/
+│   │   └── Home/
+│   │       ├── index.jsx           # Página principal que carrega os pokémons
+│   │       └── styles.module.css   # Estilos da estrutura da Home (titulos, grids e alinhamentos)
+│   ├── styles/
+│   │   └── global.css       # Regras gerais de reset de CSS e definição do fundo vermelho
+│   ├── index.js             # Ponto de entrada do React que inicializa a aplicação
+│   └── [arquivos adicionais]
+├── package.json             # Dependências de bibliotecas e scripts do projeto (CRA)
+└── README.md                # Documentação do projeto
+```
+---
+## 🛠️ Tecnologias Utilizadas
+- [React v18](https://react.dev/) (Biblioteca JavaScript para interfaces de usuário)
+- **CSS Modules:** Técnica nativa de importação de estilos isolados.
+- **CSS3 (Customizado):** Estilização de hover e animações.
+- **Create React App:** Ferramenta de inicialização do projeto e orquestrador de build.
+---
+## ⚙️ Pokémons Cadastrados Atualmente
+Os seguintes pokémons são exibidos na listagem atual:
+- ⚡ Pikachu
+- 🔥 Charmander
+- 🦖 Charizard
+- 🐢 Squirtle
+- 🧬 Ditto
+---
+## 💻 Como Rodar o Projeto
+### Requisitos:
+Certifique-se de possuir o [Node.js](https://nodejs.org/) instalado em sua máquina.
+### Passo a Passo:
+1. Abra o terminal na pasta raiz do projeto.
+2. Instale as dependências declaradas no projeto executando o comando:
+   ```bash
+   npm install
+   ```
+3. Inicialize o servidor de desenvolvimento local:
+   ```bash
+   npm start
+   ```
+4. O navegador abrirá automaticamente o endereço: [http://localhost:3000](http://localhost:3000). Caso não abra, acesse manualmente pelo navegador.
